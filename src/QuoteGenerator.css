@@ -1,48 +1,113 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
 
+/* Quote Generator Container */
 .quote-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .quote-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .quote-text {
-    font-size: 24px;
-    font-style: italic;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .quote-author {
-    font-size: 20px;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .new-quote-btn {
-    background-color: #4e54c8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .new-quote-btn:hover {
-    background-color: #8f94fb;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Light and Dark Theme */
+.quote-container.light {
+  color: #000;
+}
+
+.quote-container.dark {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+.quote-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Merriweather', serif; /* Change to a more stylish serif font */
+}
+
+/* Quote Text in Italic and a Stylish Font */
+.quote-text {
+  font-size: 24px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif; /* Use Playfair Display for an elegant style */
+  color: #333;
+  margin-bottom: 20px;
+  transition: font-size 0.3s;
+}
+
+/* Quote Author in Italic and Bold */
+.quote-author {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Merriweather', serif; /* You can keep this matching with the quote-box */
+  margin-bottom: 20px;
+}
+
+/* Button Container for better alignment */
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+/* New Quote and Auto Fetch Buttons */
+.new-quote-btn,
+.auto-fetch-btn {
+  background-color: #4e54c8;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px; /* Consistent spacing */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-quote-btn:hover,
+.auto-fetch-btn:hover {
+  background-color: #8f94fb;
+  transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+  margin-left: 15px; /* Space between the button and the icon */
+  transition: transform 0.2s ease;
+  margin-right:15px ;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+/* Favorites Section */
+.favorites-section {
+  margin-top: 30px;
+}
+
+.favorites-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorites-section li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
